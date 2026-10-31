@@ -1,0 +1,256 @@
+[
+  {
+    "id": "CASE-01",
+    "category": "Data Privacy (PDPL)",
+    "prompt": "Compliance Audit Request: Department plans to share citizen records including National ID and IBAN with marketing vendor without explicit consent under Saudi PDPL. Set compliance_status to NON_COMPLIANT, violation_type to UNAUTHORIZED_PII_SHARING, framework to Saudi PDPL, and severity to CRITICAL.",
+    "expected_output": {
+      "compliance_status": "NON_COMPLIANT",
+      "violation_type": "UNAUTHORIZED_PII_SHARING",
+      "framework": "Saudi PDPL",
+      "severity": "CRITICAL"
+    }
+  },
+  {
+    "id": "CASE-02",
+    "category": "Public Procurement",
+    "prompt": "Extract tender parameters: Ministry of Environment tender ref 24089102 for IoT sensor supplies, budget 3500000 SAR, deadline 2026-12-10.",
+    "expected_output": {
+      "entity": "Ministry of Environment",
+      "tender_id": "24089102",
+      "budget_sar": 3500000,
+      "deadline": "2026-12-10"
+    }
+  },
+  {
+    "id": "CASE-03",
+    "category": "Data Classification",
+    "prompt": "Classify sensitivity: Internal server topology mapping and administrative SSH credentials stored in public repo. Set classification to TOP_SECRET, handling_protocol to RESTRICTED, and encryption_required to true.",
+    "expected_output": {
+      "classification": "TOP_SECRET",
+      "handling_protocol": "RESTRICTED",
+      "encryption_required": true
+    }
+  },
+  {
+    "id": "CASE-04",
+    "category": "Cross-Border Transfer",
+    "prompt": "Audit: Transferring 50000 citizen healthcare telemetry records to a cloud region hosted in Frankfurt without NDMO pre-clearance. Set jurisdiction_status to RESTRICTED, regulatory_body to NDMO, and risk_level to HIGH.",
+    "expected_output": {
+      "jurisdiction_status": "RESTRICTED",
+      "regulatory_body": "NDMO",
+      "risk_level": "HIGH"
+    }
+  },
+  {
+    "id": "CASE-05",
+    "category": "Vendor SLA Evaluation",
+    "prompt": "Contract SLA check: Vendor delivered cloud maintenance reports 14 business days post month-end exceeding agreed 5 days threshold. Set sla_breached to true, delay_days to 9, and penalty_applicable to true.",
+    "expected_output": {
+      "sla_breached": true,
+      "delay_days": 9,
+      "penalty_applicable": true
+    }
+  },
+  {
+    "id": "CASE-06",
+    "category": "Cybersecurity Incident",
+    "prompt": "SOC Alert: Detection of brute force anomalies targeting API Gateway authentication endpoint with 12000 failed attempts. Set incident_type to BRUTE_FORCE_AUTH, threat_severity to HIGH, and auto_block to true.",
+    "expected_output": {
+      "incident_type": "BRUTE_FORCE_AUTH",
+      "threat_severity": "HIGH",
+      "auto_block": true
+    }
+  },
+  {
+    "id": "CASE-07",
+    "category": "Financial Delegation",
+    "prompt": "Approval Request: Officer submitted PO for 850000 SAR without committee approval against 500000 cap. Set approval_valid to false, variance_sar to 350000, and policy_violation to EXCEEDED_AUTHORITY.",
+    "expected_output": {
+      "approval_valid": false,
+      "variance_sar": 350000,
+      "policy_violation": "EXCEEDED_AUTHORITY"
+    }
+  },
+  {
+    "id": "CASE-08",
+    "category": "AI Sovereign Compliance",
+    "prompt": "Evaluate deployment architecture: Hosting unvetted foreign proprietary LLM API inside national critical infrastructure banking network. Set compliance_status to PROHIBITED, risk_category to SOVEREIGNTY_BREACH, and remediation to ENFORCE_ON_PREM_MODELS.",
+    "expected_output": {
+      "compliance_status": "PROHIBITED",
+      "risk_category": "SOVEREIGNTY_BREACH",
+      "remediation": "ENFORCE_ON_PREM_MODELS"
+    }
+  },
+  {
+    "id": "CASE-09",
+    "category": "HR Data Protection",
+    "prompt": "Audit: HR published employee performance reviews and biometric attendance records on open intranet folder. Set compliance_status to NON_COMPLIANT, data_exposed to BIOMETRIC_AND_PERFORMANCE, and severity to HIGH.",
+    "expected_output": {
+      "compliance_status": "NON_COMPLIANT",
+      "data_exposed": "BIOMETRIC_AND_PERFORMANCE",
+      "severity": "HIGH"
+    }
+  },
+  {
+    "id": "CASE-10",
+    "category": "Invoice Verification",
+    "prompt": "Validate invoice parameters: Supplier invoice INV-9901 totaling 120000 SAR with 15% VAT calculation amounting to 18000 SAR, matching PO PO-881. Set invoice_id to INV-9901, total_sar to 120000, vat_sar to 18000, and match_status to VERIFIED.",
+    "expected_output": {
+      "invoice_id": "INV-9901",
+      "total_sar": 120000,
+      "vat_sar": 18000,
+      "match_status": "VERIFIED"
+    }
+  },
+  {
+    "id": "CASE-11",
+    "category": "Healthcare Confidentiality",
+    "prompt": "Hospital telemetry exported patient oncology diagnoses to external analytics dashboard without anonymization tokens. Set audit_result to FAILED, violation to UNANONYMIZED_HEALTH_DATA, and framework to Saudi Health Council & PDPL.",
+    "expected_output": {
+      "audit_result": "FAILED",
+      "violation": "UNANONYMIZED_HEALTH_DATA",
+      "framework": "Saudi Health Council & PDPL"
+    }
+  },
+  {
+    "id": "CASE-12",
+    "category": "Infrastructure Vulnerability",
+    "prompt": "Scan result: Port 22 SSH open to public CIDR 0.0.0.0/0 on production payment gateway load balancer. Set risk_level to CRITICAL, remediation to RESTRICT_TO_BASTION, and incident_logged to true.",
+    "expected_output": {
+      "risk_level": "CRITICAL",
+      "remediation": "RESTRICT_TO_BASTION",
+      "incident_logged": true
+    }
+  },
+  {
+    "id": "CASE-13",
+    "category": "Smart Contract Audit",
+    "prompt": "Audit token disbursement contract: Reentrancy vulnerability identified in withdrawal fallback function without state lock mutex. Set vulnerability to REENTRANCY, severity to CRITICAL, and exploit_risk to DRAIN_FUNDS.",
+    "expected_output": {
+      "vulnerability": "REENTRANCY",
+      "severity": "CRITICAL",
+      "exploit_risk": "DRAIN_FUNDS"
+    }
+  },
+  {
+    "id": "CASE-14",
+    "category": "Cloud Budget Governance",
+    "prompt": "Cost anomaly: Staging cluster GPU usage spiked billing by 45000 SAR in 48 hours without workload scaling tickets. Set anomaly_type to SPEND_OVERRUN, amount_sar to 45000, and automated_action to QUOTA_CAP.",
+    "expected_output": {
+      "anomaly_type": "SPEND_OVERRUN",
+      "amount_sar": 45000,
+      "automated_action": "QUOTA_CAP"
+    }
+  },
+  {
+    "id": "CASE-15",
+    "category": "Access Control Drift",
+    "prompt": "Identity audit: Contractor user account retained active domain admin privileges 30 days after contract termination. Set privilege_status to ORPHANED_ADMIN, action to REVOKE_IMMEDIATELY, and compliance_gap to ACCESS_RECERTIFICATION.",
+    "expected_output": {
+      "privilege_status": "ORPHANED_ADMIN",
+      "action": "REVOKE_IMMEDIATELY",
+      "compliance_gap": "ACCESS_RECERTIFICATION"
+    }
+  },
+  {
+    "id": "CASE-16",
+    "category": "Data Retention Policy",
+    "prompt": "Database audit: Raw audit logs from 2018 still retained in active transactional cluster despite 3-year statutory policy. Set retention_status to OVER_RETAINED, framework to Data Lifecycle Policy, and action_required to PURGE_ARCHIVE.",
+    "expected_output": {
+      "retention_status": "OVER_RETAINED",
+      "framework": "Data Lifecycle Policy",
+      "action_required": "PURGE_ARCHIVE"
+    }
+  },
+  {
+    "id": "CASE-17",
+    "category": "API Rate Limit Breach",
+    "prompt": "Traffic monitor: Microservice payment endpoint received 5000 req/sec exceeding tenant quota of 1000 req/sec. Set quota_exceeded to true, traffic_multiplier to 5, and response_action to HTTP_429_THROTTLE.",
+    "expected_output": {
+      "quota_exceeded": true,
+      "traffic_multiplier": 5,
+      "response_action": "HTTP_429_THROTTLE"
+    }
+  },
+  {
+    "id": "CASE-18",
+    "category": "Supply Chain Compliance",
+    "prompt": "Vendor onboarding: Subcontractor refused to provide valid Zakat certificate for 2026 bid. Set qualification_status to DISQUALIFIED, missing_doc to ZAKAT_CERTIFICATE, and eligibility to false.",
+    "expected_output": {
+      "qualification_status": "DISQUALIFIED",
+      "missing_doc": "ZAKAT_CERTIFICATE",
+      "eligibility": false
+    }
+  },
+  {
+    "id": "CASE-19",
+    "category": "Secret Leakage Detection",
+    "prompt": "Source control scan: AWS secret access key hardcoded inside production bash script commit c89a01. Set threat to EXPOSED_CREDENTIALS, service to AWS_IAM, and containment to ROTATE_KEY_IMMEDIATELY.",
+    "expected_output": {
+      "threat": "EXPOSED_CREDENTIALS",
+      "service": "AWS_IAM",
+      "containment": "ROTATE_KEY_IMMEDIATELY"
+    }
+  },
+  {
+    "id": "CASE-20",
+    "category": "Legal Contract Extraction",
+    "prompt": "Extract clause: Commercial lease agreement stipulates dispute resolution must be conducted under Saudi Commercial Courts in Riyadh. Set governing_law to Saudi Commercial Courts, jurisdiction_city to Riyadh, and dispute_type to LITIGATION.",
+    "expected_output": {
+      "governing_law": "Saudi Commercial Courts",
+      "jurisdiction_city": "Riyadh",
+      "dispute_type": "LITIGATION"
+    }
+  },
+  {
+    "id": "CASE-21",
+    "category": "Regulatory Audit Log",
+    "prompt": "Verify cryptographic hashing: Transaction audit log chain missing SHA-256 integrity block for ledger segment 44102. Set integrity_valid to false, segment_id to 44102, and corruption_flag to HASH_MISMATCH.",
+    "expected_output": {
+      "integrity_valid": false,
+      "segment_id": 44102,
+      "corruption_flag": "HASH_MISMATCH"
+    }
+  },
+  {
+    "id": "CASE-22",
+    "category": "Environmental Compliance",
+    "prompt": "Industrial IoT stream: Factory emissions monitor reporting carbon particulate level of 85 mg/m3 against 50 mg/m3 regulatory cap. Set emission_breach to true, recorded_value to 85, threshold to 50, and environmental_action to ISSUE_IMMEDIATE_FINE.",
+    "expected_output": {
+      "emission_breach": true,
+      "recorded_value": 85,
+      "threshold": 50,
+      "environmental_action": "ISSUE_IMMEDIATE_FINE"
+    }
+  },
+  {
+    "id": "CASE-23",
+    "category": "Device Telemetry Security",
+    "prompt": "Device fleet audit: 120 smart energy meters failed firmware signature verification during OTA update. Set verification_status to SIGNATURE_REJECTED, affected_devices to 120, and protocol to ROLLBACK_FIRMWARE.",
+    "expected_output": {
+      "verification_status": "SIGNATURE_REJECTED",
+      "affected_devices": 120,
+      "protocol": "ROLLBACK_FIRMWARE"
+    }
+  },
+  {
+    "id": "CASE-24",
+    "category": "Public Sector Grant Allocation",
+    "prompt": "Grant evaluation: R&D funding application approved for 1200000 SAR exceeding maximum ceiling of 1000000 SAR. Set grant_valid to false, excess_sar to 200000, and governance_decision to REJECT_AND_CAP.",
+    "expected_output": {
+      "grant_valid": false,
+      "excess_sar": 200000,
+      "governance_decision": "REJECT_AND_CAP"
+    }
+  },
+  {
+    "id": "CASE-25",
+    "category": "Emergency Protocol Authorization",
+    "prompt": "Disaster recovery override: Operational team initiated primary database failover to secondary region during business hours without CAB permit. Set failover_authorized to false, incident_severity to P1_UNSCHEDULED_FAILOVER, and escalation to CHIEF_INFORMATION_OFFICER.",
+    "expected_output": {
+      "failover_authorized": false,
+      "incident_severity": "P1_UNSCHEDULED_FAILOVER",
+      "escalation": "CHIEF_INFORMATION_OFFICER"
+    }
+  }
+]
